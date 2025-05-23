@@ -1,25 +1,20 @@
 public class UserSession {
-    // Biến tĩnh private để đếm số người dùng online
     private static int onlineCount = 0;
 
-    // Hàm tạo tăng onlineCount khi một người dùng đăng nhập
     public UserSession() {
         onlineCount++;
     }
 
-    // Phương thức giảm onlineCount khi người dùng đăng xuất
     public void logout() {
         if (onlineCount > 0) {
             onlineCount--;
         }
     }
 
-    // Phương thức tĩnh trả về số người dùng online
     public static int getOnlineCount() {
         return onlineCount;
     }
 
-    // Chương trình chính để mô phỏng
     public static void main(String[] args) {
 
         // Mô phỏng 3 người dùng đăng nhập
